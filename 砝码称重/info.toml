@@ -1,0 +1,26 @@
+name = "砝码称重"
+index = 2
+knowledge = 'dp'
+level = 'middle'
+url = 'http://lx.lanqiao.cn/problem.page?gpid=T2893'
+platform = 'lanqiao'
+
+[[data]]
+input = """
+3
+1 4 6
+"""
+
+output = """
+10
+"""
+
+[[data]]
+input = """
+5
+1 6 9 8 5
+"""
+
+output = """
+27
+"""

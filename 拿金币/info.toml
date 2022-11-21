@@ -1,3 +1,5 @@
+name = "拿金币"
+index = 1
 knowledge = 'dp'
 level = 'easy'
 url = 'http://lx.lanqiao.cn/problem.page?gpid=T3000'
