@@ -1,6 +1,6 @@
 name = "砝码称重"
 index = 2
-knowledge = 'dp'
+knowledge = ['dp', '背包']
 level = 'middle'
 url = 'http://lx.lanqiao.cn/problem.page?gpid=T2893'
 platform = 'lanqiao'
