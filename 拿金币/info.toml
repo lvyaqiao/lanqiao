@@ -1,0 +1,16 @@
+knowledge = 'dp'
+level = 'easy'
+url = 'http://lx.lanqiao.cn/problem.page?gpid=T3000'
+platform = 'lanqiao'
+
+[[data]]
+input = """
+3
+1 3 3
+2 2 2
+3 1 2
+"""
+
+output = """
+11
+"""
