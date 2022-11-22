@@ -54,6 +54,5 @@ def solution2():
 
     last = dp[n]
     print(sum(last) - 1)
-
-
+    get
 solution2()

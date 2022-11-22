@@ -8,7 +8,7 @@ int dp[N][MAX_W] = {0};
 
 int main()
 {
-
+    
     int n;
     scanf("%d", &n);
     // 读入砝码质量

@@ -3,7 +3,9 @@ index = 1
 knowledge = ['dp']
 level = 'easy'
 url = 'http://lx.lanqiao.cn/problem.page?gpid=T3000'
+tag = ['真题']
 platform = 'lanqiao'
+
 
 [[data]]
 input = """

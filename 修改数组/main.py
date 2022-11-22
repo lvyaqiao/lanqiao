@@ -4,6 +4,7 @@ def get_input():
     return N, lst
 
 def solution():
+    
     N, lst = get_input()
     dic = {}
     def dic_found(number):
