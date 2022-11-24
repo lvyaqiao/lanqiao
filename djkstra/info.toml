@@ -1,5 +1,5 @@
 name = "dijkstra"
-index = 3
+index = 5
 knowledge = ['dijkstra', "板子"]
 level = 'easy'
 url = 'https://www.acwing.com/problem/content/852/'

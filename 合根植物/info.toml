@@ -1,5 +1,5 @@
 name = "合根植物"
-index = 2
+index = 3
 knowledge = ['并查集']
 level = 'easy'
 url = 'https://lx.lanqiao.cn/problem.page?gpid=T2850'

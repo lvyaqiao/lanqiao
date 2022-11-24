@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Collections;
+import java.util.PriorityQueue;
 
 class Edge {
     public int to;
@@ -14,14 +14,20 @@ class Edge {
 
 class Graph {
     public ArrayList<ArrayList<Edge>> edges;
-    public Graph (int n){
-        edges = new ArrayList<ArrayList<Edge>>(n);
-        for (int i = 0; i < n; i++) {
+
+    public Graph(int n) {
+        edges = new ArrayList<ArrayList<Edge>>(n + 1);
+        for (int i = 0; i <= n; i++) {
             edges.add(new ArrayList<Edge>());
         }
     }
+
     public void addEdge(int from, int to, int weight) {
         edges.get(from).add(new Edge(to, weight));
+    }
+
+    public ArrayList<Edge> neighbors(int u) {
+        return edges.get(u);
     }
 }
 
@@ -55,7 +61,34 @@ public class Main {
         }
         sc.close();
 
-        
+        boolean[] vis = new boolean[n + 1];
 
+        int[] dis = new int[n + 1];
+        for (int i = 0; i <= n; i++) {
+            dis[i] = Integer.MAX_VALUE;
+        }
+
+        PriorityQueue<Node> pq = new PriorityQueue<Node>();
+        Node cur = new Node(1, 0);
+        pq.add(cur);
+        while (!pq.isEmpty()) {
+            cur = pq.poll();
+            if (vis[cur.u])
+                continue;
+            else if (cur.u == n) {
+                System.out.println(cur.dist);
+                return;
+            } else {
+                dis[cur.u] = cur.dist;
+                vis[cur.u] = true;
+                for (Edge e : g.neighbors(cur.u)) {
+                    if (!vis[e.to]) {
+                        pq.add(new Node(e.to, cur.dist + e.weight));
+                    }
+                }
+            }
+        }
+        System.out.println(-1);
+        return;
     }
 }

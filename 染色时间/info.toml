@@ -1,0 +1,31 @@
+name = "染色时间"
+index = 6
+knowledge = ['dijkstra']
+level = 'easy'
+url = '' # 这题没找到OJ
+tag = ['真题']
+platform = ''
+
+[[data]]
+input = """
+2 3
+1 2 3
+4 5 6
+"""
+
+output = """
+12
+"""
+
+[[data]] 
+input = """
+4 4
+1 1 2 7
+1 2 8 1
+1 1 7 1
+1 1 7 1
+"""
+
+output = """
+13
+"""

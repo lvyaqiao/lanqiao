@@ -48,6 +48,7 @@ public class Main {
             int b = sc.nextInt();
             ds.union(a, b);
         }
+        sc.close();
         System.out.println(ds.count());
     }
 }
