@@ -1,6 +1,7 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.PriorityQueue;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
 
 class Edge {
     public int to;
@@ -47,19 +48,21 @@ class Node implements Comparable<Node> {
 }
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+    public static void main(String[] args) throws Exception {
+        BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+        String[] params = buf.readLine().split(" ");
+        int n = Integer.parseInt(params[0]);
+        int m = Integer.parseInt(params[1]);
         int x, y, z;
         Graph g = new Graph(n);
         for (int i = 0; i < m; i++) {
-            x = sc.nextInt();
-            y = sc.nextInt();
-            z = sc.nextInt();
+            params = buf.readLine().split(" ");
+            x = Integer.parseInt(params[0]);
+            y = Integer.parseInt(params[1]);
+            z = Integer.parseInt(params[2]);
             g.addEdge(x, y, z);
         }
-        sc.close();
+        buf.close();
 
         boolean[] vis = new boolean[n + 1];
 

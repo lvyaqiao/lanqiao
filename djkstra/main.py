@@ -42,7 +42,7 @@ def solution():
             # 否则，把这个点标记为已经访问过，然后把这个点的所有邻居加入到优先队列中
             vis[u] = True
             for v, w in g.neighbors(u):
-                heappush(pq, (d + w, v))
+                    heappush(pq, (d + w, v))
     # 没找到
     print(-1)
 

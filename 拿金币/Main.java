@@ -1,17 +1,19 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+    public static void main(String[] args) throws Exception {
+        BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(buf.readLine());
         int[][] arr = new int[n + 1][n + 1];
 
         for (int i = 1; i <= n; i++) {
+            String[] params = buf.readLine().split(" ");
             for (int j = 1; j <= n; j++) {
-                arr[i][j] = sc.nextInt();
+                arr[i][j] = Integer.parseInt(params[j - 1]);
             }
         }
-        sc.close();
+        buf.close();
 
         int[][] dp = new int[n + 1][n + 1];
         for (int i = 1; i <= n; i++) {

@@ -1,14 +1,15 @@
-import java.util.Scanner;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+    public static void main(String[] args) throws Exception {
+        BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(buf.readLine());
         int[] a = new int[n + 1];
+        String[] params = buf.readLine().split(" ");
         for (int i = 1; i <= n; i++) {
-            a[i] = sc.nextInt();
+            a[i] = Integer.parseInt(params[i - 1]);
         }
-        sc.close();
 
         int[][] dp = new int[n + 1][100002];
 
